@@ -116,4 +116,8 @@ ul li {
     margin-left: 20px;
 }
 
-.card
+.card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 20px
+
