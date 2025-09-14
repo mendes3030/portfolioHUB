@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <!-- Navbar -->
   <nav>
     <div class="logo">João Augusto</div>
@@ -26,10 +27,10 @@
   <!-- Sobre Mim -->
   <section id="sobre">
     <div class="sobre-container">
-      <img src="images/image12345.jpeg" alt="Foto de João Augusto" class="foto-perfil">
+      <img src="foto.jpg" alt="Foto de João Augusto" class="foto-perfil">
       <div class="sobre-texto">
         <h1>João Augusto</h1>
-        <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> com paixão por tecnologia, inovação e desenvolvimento de soluções digitais. Busco ampliar meus conhecimentos em programação, desenvolvimento web e análise de dados, sempre aplicando criatividade e lógica para resolver problemas reais.</p>
+        <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por tecnologia, inovação e desenvolvimento de soluções digitais. Busco ampliar meus conhecimentos em programação, desenvolvimento web e análise de dados, aplicando lógica e criatividade para resolver problemas reais.</p>
         <p>Meu objetivo é construir uma carreira sólida como analista e desenvolvedor de sistemas, participando de projetos que gerem impacto positivo para usuários e empresas.</p>
         <div class="contact">
           <a href="https://www.linkedin.com/in/joaoaugustofranca" target="_blank">LinkedIn</a>
@@ -59,6 +60,7 @@
         <h3>Certificações</h3>
         <ul>
           <li>Python – Curso em Vídeo – 2025</li>
+          <li>Pacote Office – Cursoseducaweb – 2025</li>
         </ul>
       </div>
     </div>
@@ -70,18 +72,10 @@
     <div class="skills-container">
       <div class="skill-card">
         <h3>Habilidades Técnicas</h3>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="70%">Python</div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="60%">Java</div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="50%">JavaScript</div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="80%">HTML & CSS</div>
-        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="70%">Python</div></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="60%">Java</div></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="50%">JavaScript</div></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="80%">HTML & CSS</div></div>
       </div>
       <div class="skill-card">
         <h3>Habilidades Pessoais</h3>
@@ -131,19 +125,14 @@
   </section>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('nav-menu').classList.toggle('show');
-    }
-
-    // animação das habilidades
+    function toggleMenu() { document.getElementById('nav-menu').classList.toggle('show'); }
     window.addEventListener('load', () => {
-      const skillFills = document.querySelectorAll('.skill-fill');
-      skillFills.forEach(bar => {
-        const width = bar.getAttribute('data-width');
-        bar.style.width = width;
+      document.querySelectorAll('.skill-fill').forEach(bar => {
+        bar.style.width = bar.getAttribute('data-width');
       });
     });
   </script>
 </body>
 </html>
+
 
