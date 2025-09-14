@@ -3,26 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>João Augusto | Portfólio</title>
+  <title>Portfólio João Augusto</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">João Augusto</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-    <ul id="nav-menu">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#formacao">Formação</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#testemunhos">Testemunhos</a></li>
-    </ul>
-  </nav>
 
   <!-- Sobre Mim -->
   <section id="sobre">
@@ -33,9 +18,9 @@
         <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por tecnologia, inovação e desenvolvimento de soluções digitais. Busco ampliar meus conhecimentos em programação, desenvolvimento web e análise de dados, aplicando lógica e criatividade para resolver problemas reais.</p>
         <p>Meu objetivo é construir uma carreira sólida como analista e desenvolvedor de sistemas, participando de projetos que gerem impacto positivo para usuários e empresas.</p>
         <div class="contact">
-          <a href="https://www.linkedin.com/in/joaoaugustofranca" target="_blank">LinkedIn</a>
-          <a href="https://github.com/mendes3030" target="_blank">GitHub</a>
-          <a href="mailto:mendes41eb@gmail.com">Email</a>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/joaoaugustofranca">www.linkedin.com/in/joaoaugustofranca</a></p>
+          <p>GitHub: <a href="https://github.com/mendes3030">https://github.com/mendes3030</a></p>
+          <p>Email: <a href="mailto:mendes41eb@gmail.com">mendes41eb@gmail.com</a></p>
         </div>
       </div>
     </div>
@@ -72,10 +57,13 @@
     <div class="skills-container">
       <div class="skill-card">
         <h3>Habilidades Técnicas</h3>
-        <div class="skill-bar"><div class="skill-fill" data-width="70%">Python</div></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60%">Java</div></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="50%">JavaScript</div></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="80%">HTML & CSS</div></div>
+        <ul>
+          <li>Python (básico)</li>
+          <li>Java (básico)</li>
+          <li>JavaScript (início)</li>
+          <li>HTML & CSS</li>
+          <li>Pacote Office</li>
+        </ul>
       </div>
       <div class="skill-card">
         <h3>Habilidades Pessoais</h3>
@@ -124,16 +112,9 @@
     </div>
   </section>
 
-  <script>
-    function toggleMenu() { document.getElementById('nav-menu').classList.toggle('show'); }
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.skill-fill').forEach(bar => {
-        bar.style.width = bar.getAttribute('data-width');
-      });
-    });
-  </script>
 </body>
 </html>
+
 
 
 
