@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Augusto | PortfolioHUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #0d6efd;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 15px 30px;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        .navbar-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .navbar-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        @media(max-width: 768px){
+            .navbar-toggle {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                background-color: #1a1a1a;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                display: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+        }
+
+        section {
+            padding: 100px 20px 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 28px;
+            border-bottom: 2px solid #1e90ff;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        p, li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        ul li {
+            margin-left: 20px;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+        }
+
+        .skills, .projects, .testimonials {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media(max-width: 768px){
+            .skills, .projects, .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .skill-bar {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar-fill {
+            height: 20px;
+            width: 0;
+            background-color: #1e90ff;
+            border-radius: 10px;
+            text-align: right;
+            padding-right: 5px;
+            line-height: 20px;
+            color: #fff;
+            font-size: 12px;
+            transition: width 2s ease-in-out;
+        }
+
+        .contact a {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">João Augusto</div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#testemunhos">Testemunhos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sobre / Biografia -->
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Sou <strong>João Augusto</strong>, estudante de Análise e Desenvolvimento de Sistemas, com grande interesse por tecnologia, inovação e soluções digitais que façam a diferença no dia a dia das pessoas. Busco constantemente ampliar meus conhecimentos em programação, desenvolvimento web e análise de dados, além de fortalecer habilidades importantes como trabalho em equipe, organização e comunicação.</p>
+        <p>Meu objetivo é desenvolver uma carreira sólida na área de tecnologia, participando de projetos acadêmicos e profissionais que contribuam para minha evolução e também para os resultados das empresas em que eu atuar.</p>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/joaoaugustofranca" target="_blank">LinkedIn</a>
+            <a href="https://github.com/mendes3030" target="_blank">GitHub</a>
+            <a href="mailto:mendes41eb@gmail.com">Email: mendes41eb@gmail.com</a>
+        </div>
+    </section>
+
+    <!-- Formação -->
+    <section id="formacao">
+        <h2>Formação Acadêmica</h2>
+        <div class="card">
+            <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+            <p>UNICEUB</p>
+        </div>
+
+        <h2>Cursos Complementares</h2>
+        <div class="card">
+            <ul>
+                <li>Python – Curso em Vídeo – 2025</li>
+                <li>Pacote Office – Cursoseducaweb – 2024</li>
+            </ul>
+        </div>
+
+        <h2>Certificações</h2>
+        <div class="card">
+            <ul>
+                <li>Python – Curso em Vídeo – 2025</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+        <h2>Habilidades e Competências</h2>
+        <div class="skills">
+            <div class="card">
+                <h3>Habilidades Técnicas</h3>
+                <div class="skill-bar">
+                    <div class="skill-bar-fill" data-width="60%">Python</div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-bar-fill" data-width="50%">Java</div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-bar-fill" data-width="40%">JavaScript</div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-bar-fill" data-width="70%">HTML & CSS</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Habilidades Pessoais</h3>
+                <ul>
+                    <li>Raciocínio lógico e resolução de problemas</li>
+                    <li>Proatividade e interesse em inovação</li>
+                </ul>
+
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Inglês – Leitura: Intermediário | Conversação: Básico</li>
+                    <li>Espanhol – Básico</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Website Pessoal / Portfolio</h3>
+                <p>Criação de um site pessoal para apresentação de currículo, projetos e habilidades.</p>
+                <p>Tecnologias: HTML, CSS, Git, GitHub Pages</p>
+            </div>
+            <div class="card">
+                <h3>Mini Calculadora em Python</h3>
+                <p>Criação de um programa simples para realizar operações matemáticas básicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section id="testemunhos">
+        <h2>Recomendações e Testemunhos</h2>
+        <div class="testimonials">
+            <div class="card">
+                <p>“João é dedicado, proativo e busca constantemente aprender coisas novas. Demonstra bom raciocínio lógico e capacidade de trabalhar em equipe.”</p>
+            </div>
+            <div class="card">
+                <p>“Demostra interesse em tecnologia e inovação, aplicando seus conhecimentos de forma prática nos projetos acadêmicos.”</p>
+            </div>
+            <div class="card">
+                <p>“Organizado e comprometido, sempre procura entregar trabalhos com qualidade e pontualidade.”</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+
+        // Animação das barras de habilidades
+        window.addEventListener('load', () => {
+            const skillBars = document.querySelectorAll('.skill-bar-fill');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width;
+            });
+        });
+    </script>
+</body>
+</html>
